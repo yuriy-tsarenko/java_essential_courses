@@ -39,11 +39,15 @@ public class Student {
         {
 if(stu.getUsername()==null)
 {
-    System.out.println("Студент"+stu.getName()+" не указал username");
+    System.out.println("Студент "+stu.getName()+" не указал username");
 }
 if(stu.getMail()==null)
 {
-    System.out.println("Студент"+stu.getName()+" не указал mail");
+    System.out.println("Студент "+stu.getName()+" не указал mail");
+}
+if(stu.getAge()>25)
+{
+    System.out.println("Студент "+stu.getName()+" старше 25");
 }
 
         }
