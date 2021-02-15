@@ -1,4 +1,4 @@
-package com.java_essential.kopaiev_hometasks.task2.classWork.task1;
+package com.java_essential.kopaiev_hometasks.lesson2.classWork.task1;
 
 public class Student {
     private long id;

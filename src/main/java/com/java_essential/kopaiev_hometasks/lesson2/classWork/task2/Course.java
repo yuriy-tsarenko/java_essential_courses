@@ -1,6 +1,6 @@
-package com.java_essential.kopaiev_hometasks.task2.classWork.task2;
+package com.java_essential.kopaiev_hometasks.lesson2.classWork.task2;
 
-import com.java_essential.kopaiev_hometasks.task2.classWork.task1.Student;
+import com.java_essential.kopaiev_hometasks.lesson2.classWork.task1.Student;
 
 public class Course {
 
