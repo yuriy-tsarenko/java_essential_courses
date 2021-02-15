@@ -35,26 +35,46 @@ public class Student {
         students[1] = st2;
         students[2] = st3;
         students[3] = st4;
-        int countAge=0;
-        int countUsername=0;
-        int countMail=0;
+        int countAge = 0;
+        int countUsername = 0;
+        int countMail = 0;
         for (Student stu : students) {
             if (stu.getUsername() == null) {
-                System.out.println("Студент " + stu.getName() + " не указал username");
                 countUsername++;
             }
             if (stu.getMail() == null) {
-                System.out.println("Студент " + stu.getName() + " не указал mail");
                 countMail++;
             }
             if (stu.getAge() > 25) {
-                System.out.println("Студент " + stu.getName() + " старше 25");
                 countAge++;
             }
-            System.out.println("Студентов старше 25: "+countAge);
-            System.out.println("Студентов без мыла: "+countMail);
-            System.out.println("Студентов без юзернейма: "+countUsername);
+            System.out.println("Студентов старше 25: " + countAge);
+            System.out.println("Студентов без мыла: " + countMail);
+            System.out.println("Студентов без юзернейма: " + countUsername);
         }
+        Course course1 = new Course();
+        Course course2 = new Course();
+        course1.setStudents(students[1], 0);
+        course1.setStudents(students[0], 1);
+        course2.setStudents(students[1], 0);
+        course2.setStudents(students[2], 1);
+        course2.setStudents(students[3], 2);
+        course1.setCourseName("CourseName1");
+        course1.setDescription("Description1");
+        course1.setId(123123213);
+        course2.setCourseName("CourseName2");
+        course2.setDescription("Description2");
+        course2.setId(123123213);
+        Course[] courses = new Course[2];
+        courses[0] = course1;
+        courses[1] = course2;
+        //Mistake
+        for (int i = 0; i <= courses.length - 1; i++) {
+
+            System.out.println(courses[i].getCourseName() + ": " + (courses[i].getStudents().length - 1));
+        }
+
+
     }
 
     private String name;
