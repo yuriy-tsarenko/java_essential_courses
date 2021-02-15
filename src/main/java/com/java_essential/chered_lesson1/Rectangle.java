@@ -1,4 +1,4 @@
-package com.java_essential.lesson_1;
+package com.java_essential.chered_lesson1;
 
 import java.util.Scanner;
 
