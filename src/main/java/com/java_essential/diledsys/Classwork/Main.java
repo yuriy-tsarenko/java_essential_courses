@@ -12,7 +12,7 @@ public class Main {
         student1.setEmail("sergei@gmail.com");
         student1.setPhone("12389567");
 
-        //
+
         Student student2 = new Student();
         student2.setId(100101);
         student2.setLastName("Sakara");
