@@ -5,11 +5,11 @@ public class Computer {
 
         Object[] computers = new Object[5];
 
-        int i=0;
-        do {;
-            computers[i]=new Computer();
-        }while ( i++<computers.length-1);
+        int i = 0;
+        do {
+            ;
+            computers[i] = new Computer();
+        } while (i++ < computers.length - 1);
     }
-
 
 }
