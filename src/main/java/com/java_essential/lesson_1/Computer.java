@@ -1,18 +1,33 @@
 package com.java_essential.lesson_1;
 
 public class Computer {
+    public Computer() {
+
+    }
+
+    public Computer next(int num)
+    {
+        switch (num)
+        {
+            case  0: return new Computer("Comp1");
+            case  1: return new Computer("Comp2");
+            case  2: return new Computer("Comp3");
+            case  3: return new Computer("Comp4");
+            case  4: return new Computer("Comp5");
+            default:
+        }
+        return null;
+    }
     public static void main(String[] args) {
         Computer []computers =new Computer[5];
-        computers [0] = new Computer("Comp1");
-        computers [1] = new Computer("Comp2");
-        computers [2] = new Computer("Comp3");
-        computers [3] = new Computer("Comp4");
-        computers [4] = new Computer("Comp5");
-for (int i=0,j=computers.length-1;i<= computers.length-1;i++,j--)
+        Computer factory= new Computer();
+for (int i=0;i<= computers.length-1;i++)
 {
-    System.out.println("OLD "+i+": "+computers[i].getModel());
-    computers[i]=computers[j];
-    System.out.println("NEW "+i+": "+computers[i].getModel());
+computers[i]=factory.next(i);
+}
+for (Computer com :computers)
+{
+    System.out.println(com.model);
 }
 
     }
