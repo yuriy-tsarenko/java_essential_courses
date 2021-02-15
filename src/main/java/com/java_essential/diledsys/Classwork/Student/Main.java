@@ -1,4 +1,6 @@
-package com.java_essential.diledsys.Classwork;
+package com.java_essential.diledsys.Classwork.Student;
+
+import com.java_essential.diledsys.Classwork.Student.Student;
 
 public class Main {
 
@@ -17,7 +19,7 @@ public class Main {
         student2.setId(100101);
         student2.setLastName("Sakara");
         student2.setName("Valentin");
-        //student2.setUsername("val");
+        student2.setUsername("val");
         student2.setAge(25);
         student2.setEmail("val@gmail.com");
 
@@ -42,12 +44,12 @@ public class Main {
         student4.setPhone("67876567857685");
 
 
-        Student[] array = new Student[]{student1,student2,student3,student4};
+        Student[] array = new Student[]{student1, student2, student3, student4};
 
-int countAge25=0;
-int countEmail=0;
-int countUserName=0;
-        for (Student studentas:array) {
+        int countAge25 = 0;
+        int countEmail = 0;
+        int countUserName = 0;
+        for (Student studentas : array) {
             if (studentas.getAge() > 25) {
                 countAge25++;
             }
@@ -59,12 +61,9 @@ int countUserName=0;
             }
 
         }
-        System.out.println(" студентов имеет возраст старше 25:"+countAge25);
-        System.out.println("студентов не указали email: "+countEmail);
-        System.out.println("студентов не указали username"+countUserName);
-
-
-
+        System.out.println(" студентов имеет возраст старше 25:" + countAge25);
+        System.out.println("студентов не указали email: " + countEmail);
+        System.out.println("студентов не указали username" + countUserName);
 
 
     }

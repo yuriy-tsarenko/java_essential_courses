@@ -1,4 +1,4 @@
-package com.java_essential.diledsys.Classwork;
+package com.java_essential.diledsys.Classwork.Student;
 
 public class Student {
     private long id;

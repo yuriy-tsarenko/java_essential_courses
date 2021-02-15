@@ -1,16 +1,22 @@
 package com.java_essential.diledsys.Classwork.Course;
 
+
+
 public class Course {
    private long id;
    private String courseName;
    private String description;
-   private String[] student;
+   private Student[] student;
 
-    public Course(long id, String courseName, String description, String[] student) {
+    public Student[] getStudent() {
+        return student;
+    }
+
+    public Course(long id, String courseName, String description, Student[] student) {
         this.id = id;
         this.courseName = courseName;
         this.description = description;
-        this.student = student;
+        this.student=student;
     }
 
     public long getId() {
@@ -25,7 +31,4 @@ public class Course {
         return description;
     }
 
-    public String[] getStudent() {
-        return student;
-    }
 }
