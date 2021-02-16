@@ -68,10 +68,16 @@ public class Student {
         Course[] courses = new Course[2];
         courses[0] = course1;
         courses[1] = course2;
+        courses[0].getStudents();
         //Mistake
-        for (int i = 0; i <= courses.length - 1; i++) {
-
-            System.out.println(courses[i].getCourseName() + ": " + (courses[i].getStudents().length - 1));
+        for (int i = 0, j = 0; i <= courses.length - 1; i++) {
+            for (int k = 0; k <= (courses[i].getStudents().length-1); k++) {
+                if ((courses[i].getStudents())[k] != null) {
+                    j++;
+                }
+            }
+            System.out.println(courses[i].getCourseName() + ": " + j);
+            j=0;
         }
 
 
