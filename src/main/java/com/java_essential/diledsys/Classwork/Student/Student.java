@@ -9,15 +9,13 @@ public class Student {
     private String lastName;
     private int  age;
 
-
-
     public long getId() {
         return id;
     }
 
     public void setId(long id) {
         this.id = id;
-    }//dfgdssdg
+    }
 
     public String getUsername() {
         return username;

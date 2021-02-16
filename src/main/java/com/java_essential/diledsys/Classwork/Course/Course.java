@@ -1,22 +1,22 @@
 package com.java_essential.diledsys.Classwork.Course;
 
 
-
 public class Course {
-   private long id;
-   private String courseName;
-   private String description;
-   private Student[] student;
+    private final String courseName;
+    private final String description;
+    private final Student[] student;
+    private final long id;
 
-    public Student[] getStudent() {
-        return student;
-    }
 
     public Course(long id, String courseName, String description, Student[] student) {
         this.id = id;
         this.courseName = courseName;
         this.description = description;
-        this.student=student;
+        this.student = student;
+    }
+
+    public Student[] getStudent() {
+        return student;
     }
 
     public long getId() {

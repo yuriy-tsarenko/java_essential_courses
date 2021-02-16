@@ -7,7 +7,6 @@ public class Computer {
 
         int i = 0;
         do {
-            ;
             computers[i] = new Computer();
         } while (i++ < computers.length - 1);
     }
