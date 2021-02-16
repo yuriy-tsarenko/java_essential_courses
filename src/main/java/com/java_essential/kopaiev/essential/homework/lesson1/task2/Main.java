@@ -1,4 +1,4 @@
-package com.java_essential.kopaiev_hometasks.lesson1.homeWork.task2;
+package com.java_essential.kopaiev.essential.homework.lesson1.task2;
 
 import java.util.Scanner;
 

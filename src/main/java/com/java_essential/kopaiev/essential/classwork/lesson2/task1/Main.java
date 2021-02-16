@@ -1,4 +1,4 @@
-package com.java_essential.kopaiev_hometasks.lesson2.classWork.task1;
+package com.java_essential.kopaiev.essential.classwork.lesson2.task1;
 
 public class Main {
 
