@@ -12,7 +12,7 @@ public class Car_3 {
     }
 
     public Car_3(int year, double speed, int weight) {
-        this(year,speed);
+        this(year, speed);
         this.weight = weight;
     }
 

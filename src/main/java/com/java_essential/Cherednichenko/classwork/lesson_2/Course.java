@@ -14,7 +14,7 @@ public class Course {
     }
 
     public Course() {
-        this.students=new Student[4];
+        this.students = new Student[4];
     }
 
     public void setCourseName(String courseName) {

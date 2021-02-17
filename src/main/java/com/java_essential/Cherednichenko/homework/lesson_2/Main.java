@@ -24,7 +24,7 @@ public class Main {
         Car_2 car_24 = new Car_2(1969, 80.65, 3500, "Red");
         System.out.println("Car_2 year: " + car_24.getYear() + " Car_2 speed: " + car_24.getSpeed() + " Car_2 weight: " + car_24.getWeight() + " Car_2 color: " + car_24.getColor());
 
-        //Task#3
+        //Task#
         System.out.println("Task#3");
         Car_3 car_3 = new Car_3();
         System.out.println("Car_3 year: " + car_3.getYear() + " Car_3 speed: " + car_3.getSpeed() + " Car_3 weight: " + car_3.getWeight() + " Car_3 color: " + car_3.getColor());
