@@ -1,4 +1,4 @@
-package com.java_essential.chered_lesson2;
+package com.java_essential.Cherednichenko.classwork.lesson_2;
 
 public class Student {
     public static void main(String[] args) {

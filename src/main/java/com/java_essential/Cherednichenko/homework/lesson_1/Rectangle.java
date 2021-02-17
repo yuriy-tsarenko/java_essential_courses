@@ -1,4 +1,4 @@
-package com.java_essential.chered_lesson1;
+package com.java_essential.Cherednichenko.homework.lesson_1;
 
 import java.util.Scanner;
 
