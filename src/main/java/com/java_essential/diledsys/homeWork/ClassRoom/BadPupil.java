@@ -10,18 +10,15 @@ public class BadPupil extends Pupil {
     @Override
     void read() {
         System.out.println("reads bad");
-
     }
 
     @Override
     void write() {
         System.out.println("writes badly");
-
     }
 
     @Override
     void relax() {
         System.out.println("resting great");
-
     }
 }

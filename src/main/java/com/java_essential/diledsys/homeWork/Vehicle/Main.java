@@ -4,15 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        Ship ship = new Ship( "Haifa Port", 1000000, 50, "2003", 100 );
-        Car car = new Car( "Magazin Aviz", 150000, 220, "2018" );
-        Plan plan = new Plan( "Aeraport Bengurion", 500000, 500, "2007", 12, 1200 );
-        System.out.println( ship.toString() );
-        System.out.println( car.toString() );
-        System.out.println( plan.toString() );
-
+        Vehicle[] vehicles = new Vehicle[3];
+        vehicles[0] = new Ship( "Haifa Port", 1000000, 50, "2003", 100 );
+        vehicles[1] = new Car( "Magazin Aviz", 150000, 220, "2018" );
+        vehicles[2] = new Plan( "Aeraport Bengurion", 500000, 500, "2007", 12, 1200 );
+        for (Vehicle vehicle : vehicles) {
+            System.out.println( vehicle.toString() );
+        }
     }
-
-
 }
