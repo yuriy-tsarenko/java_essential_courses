@@ -8,21 +8,17 @@ public class Main {
         rectangleCalculation();
     }
 
-    public static void rectangleCalculation()
-    {
+    public static void rectangleCalculation() {
         double side1;
         double side2;
         Scanner sc = new Scanner(System.in);
 
-        while (true)
-        {
+        while (true) {
             System.out.println("Hi, type first value");
-            if (sc.hasNextDouble())
-            {
+            if (sc.hasNextDouble()) {
                 side1 = sc.nextDouble();
                 System.out.println("Hi, type second value");
-                if (sc.hasNextDouble())
-                {
+                if (sc.hasNextDouble()) {
                     side2 = sc.nextDouble();
                     break;
                 }
@@ -31,10 +27,10 @@ public class Main {
 
         }
 
-        Rectangle rectangle = new Rectangle(side1,side2);
+        Rectangle rectangle = new Rectangle(side1, side2);
 
-        System.out.println("Triangle area is " + rectangle.areaCalculator(side1,side2));
-        System.out.println("Triangle perimeter is " + rectangle.perimeterCalculator(side1,side2));
+        System.out.println("Triangle area is " + rectangle.areaCalculator(side1, side2));
+        System.out.println("Triangle perimeter is " + rectangle.perimeterCalculator(side1, side2));
 
     }
 }
