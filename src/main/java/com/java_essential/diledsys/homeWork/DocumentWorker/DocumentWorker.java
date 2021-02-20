@@ -7,7 +7,6 @@ public class DocumentWorker {
 
     public void editDocument() {
         System.out.println( "Редактирование документа доступно в версии Про" );
-
     }
 
     public void saveDocument() {
