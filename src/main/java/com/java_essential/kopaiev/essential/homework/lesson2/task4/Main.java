@@ -5,7 +5,7 @@ public class Main {
         Car withoutParameterCar = new Car();
         Car oneParameterCar = new Car(2010);
         Car twoParameterCar = new Car(2010, 300);
-        Car threeParameterCar = new Car(2015,320, 1500);
-        Car fourParameterCar = new Car(2005, 220, 3500,"blue");
+        Car threeParameterCar = new Car(2015, 320, 1500);
+        Car fourParameterCar = new Car(2005, 220, 3500, "blue");
     }
 }
