@@ -1,4 +1,4 @@
-package com.java_essential.varycheva.essential.homework.lesson3.task2;
+package com.java_essential.varycheva.essential.homework.hw3.task2;
 
 public class Main {
     public static void main(String[] args) {

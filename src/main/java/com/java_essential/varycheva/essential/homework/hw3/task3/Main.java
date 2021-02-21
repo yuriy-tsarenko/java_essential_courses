@@ -1,4 +1,4 @@
-package com.java_essential.varycheva.essential.homework.lesson3.task3;
+package com.java_essential.varycheva.essential.homework.hw3.task3;
 
 import java.util.Scanner;
 

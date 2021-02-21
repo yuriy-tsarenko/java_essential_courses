@@ -1,4 +1,4 @@
-package com.java_essential.varycheva.essential.homework.lesson3.task1;
+package com.java_essential.varycheva.essential.homework.hw3.task1;
 
 public abstract class Pupil {
 

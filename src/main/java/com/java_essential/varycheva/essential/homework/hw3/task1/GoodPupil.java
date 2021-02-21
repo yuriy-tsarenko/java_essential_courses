@@ -1,33 +1,33 @@
-package com.java_essential.varycheva.essential.homework.lesson3.task1;
+package com.java_essential.varycheva.essential.homework.hw3.task1;
 
-public class ExcellentPupil extends Pupil {
+public class GoodPupil extends Pupil {
 
-    private final int MAX_MARK = 100;
-    private final int MIN_MARK = 81;
+    private final int MAX_MARK = 80;
+    private final int MIN_MARK = 70;
 
-    public ExcellentPupil(String name, String gender, int age, int course, double averageRating) {
-        super(name, gender, age, course, averageRating);
+    public GoodPupil(String name, String gender, int age) {
+        super(name, gender, age);
         super.averageRating = (int) (Math.random() * (MAX_MARK - MIN_MARK + 1) + MIN_MARK);
     }
 
     @Override
     public void study() {
         String message = super.toString() + "\nStudent grade for studying is " + averageRating * 0.4 +
-                "\nStudent studies very well";
+                "\nStudent studies well";
         System.out.println(message);
     }
 
     @Override
     public void read() {
         String message = super.toString() + "\nStudent grade for reading is " + averageRating * 0.25 +
-                "\nStudent reads very well";
+                "\nStudent reads well";
         System.out.println(message);
     }
 
     @Override
     public void write() {
         String message = super.toString() + "\nStudent grade for writing is " + averageRating * 0.25 +
-                "\nStudent writes very well";
+                "\nStudent writes well";
         System.out.println(message);
     }
 
