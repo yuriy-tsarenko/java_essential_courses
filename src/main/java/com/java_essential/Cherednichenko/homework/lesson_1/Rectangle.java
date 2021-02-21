@@ -14,8 +14,9 @@ public class Rectangle {
         System.out.print("Area:" + rectangle.areaCalculator(side1, side2) + " Perimeter:" + rectangle.perimeterCalculator(side1, side2));
     }
 
-    public Rectangle() {
-    }
+
+    public Rectangle() {}
+
 
     public double areaCalculator(double side1, double side2) {
         return side1 * side2;

@@ -1,15 +1,21 @@
 package com.java_essential.Cherednichenko.homework.lesson_1;
 
-public class Content extends Book {
-    String content;
+public class Content {
+    private String content;
 
     public Content(String content) {
-        super();
         this.content = content;
     }
 
-    @Override
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     public void show() {
-        System.out.println(content);
+        System.out.println(content+".");
     }
 }

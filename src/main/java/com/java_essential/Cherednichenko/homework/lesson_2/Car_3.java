@@ -22,7 +22,6 @@ public class Car_3 {
     }
 
     public Car_3(int year) {
-        this();
         this.year = year;
     }
 

@@ -1,4 +1,4 @@
-package com.java_essential.Cherednichenko.classwork.lesson_4;
+package com.java_essential.Cherednichenko.homework.lesson_4;
 
 import java.util.Locale;
 import java.util.Scanner;
