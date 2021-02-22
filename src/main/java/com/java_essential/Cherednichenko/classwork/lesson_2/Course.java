@@ -3,14 +3,12 @@ package com.java_essential.Cherednichenko.classwork.lesson_2;
 import java.util.ArrayList;
 
 public class Course {
-    private ArrayList<Student> students;
+    private final ArrayList<Student> students=new ArrayList<>();
     private String courseName;
     private String description;
     private long id;
 
-    public Course() {
-        this.students = new ArrayList<Student>();
-    }
+    public Course() {}
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
