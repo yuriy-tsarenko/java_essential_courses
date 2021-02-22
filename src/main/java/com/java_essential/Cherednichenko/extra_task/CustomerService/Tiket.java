@@ -1,12 +1,12 @@
 package com.java_essential.Cherednichenko.extra_task.CustomerService;
 
 public class Tiket {
-   private int id;
-   private String serviceName;
-   private String problemDescription;
-   private String isActive;
-   private int customerID;
-   private int supportSpecialistID;
+    private int id;
+    private String serviceName;
+    private String problemDescription;
+    private String isActive;
+    private int customerID;
+    private int supportSpecialistID;
 
     public int getId() {
         return id;
@@ -54,5 +54,17 @@ public class Tiket {
 
     public void setSupportSpecialistID(int supportSpecialistID) {
         this.supportSpecialistID = supportSpecialistID;
+    }
+
+    @Override
+    public String toString() {
+        return "Tiket{" +
+                "id=" + id +
+                ", serviceName='" + serviceName + '\'' +
+                ", problemDescription='" + problemDescription + '\'' +
+                ", isActive='" + isActive + '\'' +
+                ", customerID=" + customerID +
+                ", supportSpecialistID=" + supportSpecialistID +
+                '}';
     }
 }

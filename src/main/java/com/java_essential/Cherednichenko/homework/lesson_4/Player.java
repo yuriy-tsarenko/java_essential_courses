@@ -26,7 +26,7 @@ public class Player implements Recodable, Playable {
     public static void main(String[] args) {
         Player player = new Player();
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i <= 10000; i++) {
+        while (!scanner.next().equals("stop")){
             switch (scanner.next()) {
                 case "play":
                     player.play();
@@ -38,7 +38,6 @@ public class Player implements Recodable, Playable {
                     player.pause();
                     break;
                 case "stop":
-                    i = 10000;
                     player.stop();
                     break;
                 default:

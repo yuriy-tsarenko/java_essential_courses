@@ -6,7 +6,7 @@ public class Service {
     private int id;
     private String serviceName;
     private String isActive;
-    private List<Integer> _listCustomer;
+    private List<Integer> listCustomer;
     private String serviceMonthPrice;
 
     public int getId() {
@@ -33,12 +33,12 @@ public class Service {
         this.isActive = isActive;
     }
 
-    public List<Integer> get_listCustomer() {
-        return _listCustomer;
+    public List<Integer> getlistCustomer() {
+        return listCustomer;
     }
 
-    public void set_listCustomer(List<Integer> _listCustomer) {
-        this._listCustomer = _listCustomer;
+    public void set_listCustomer(List<Integer> listCustomer) {
+        this.listCustomer = listCustomer;
     }
 
     public String getServiceMonthPrice() {
@@ -47,5 +47,16 @@ public class Service {
 
     public void setServiceMonthPrice(String serviceMonthPrice) {
         this.serviceMonthPrice = serviceMonthPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", serviceName='" + serviceName + '\'' +
+                ", isActive='" + isActive + '\'' +
+                ", _listCustomer=" + listCustomer +
+                ", serviceMonthPrice='" + serviceMonthPrice + '\'' +
+                '}';
     }
 }

@@ -1,20 +1,15 @@
 package com.java_essential.Cherednichenko.classwork.lesson_2;
 
+import java.util.ArrayList;
+
 public class Course {
-    private Student[] students;
+    private ArrayList<Student> students;
     private String courseName;
     private String description;
     private long id;
 
-    public Course(Student[] students, String courseName, String description, long id, int countStudent) {
-        this.students = students;
-        this.courseName = courseName;
-        this.description = description;
-        this.id = id;
-    }
-
     public Course() {
-        this.students = new Student[4];
+        this.students = new ArrayList<Student>();
     }
 
     public void setCourseName(String courseName) {
@@ -25,15 +20,13 @@ public class Course {
         return courseName;
     }
 
-    public void setStudents(Student students, int i) {
-
-        this.students[i] = students;
+    public void setStudents(Student students) {
+        this.students.add(students);
     }
 
-    public Student[] getStudents() {
+    public ArrayList<Student> getStudents() {
         return students;
     }
-
 
     public String getDescription() {
         return description;

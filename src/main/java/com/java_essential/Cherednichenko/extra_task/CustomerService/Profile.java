@@ -73,4 +73,18 @@ public class Profile {
     public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", customerID=" + customerID +
+                '}';
+    }
 }

@@ -6,7 +6,7 @@ public class SupportSpecialist {
     private int id;
     private String userName;
     private String password;
-    private List<Integer> _listTiket;
+    private List<Integer> listTiket;
     private int profileID;
 
     public int getId() {
@@ -33,12 +33,12 @@ public class SupportSpecialist {
         this.password = password;
     }
 
-    public List<Integer> get_listTiket() {
-        return _listTiket;
+    public List<Integer> getlistTiket() {
+        return listTiket;
     }
 
-    public void set_listTiket(List<Integer> _listTiket) {
-        this._listTiket = _listTiket;
+    public void setlistTiket(List<Integer> listTiket) {
+        this.listTiket = listTiket;
     }
 
     public int getProfileID() {
@@ -47,5 +47,16 @@ public class SupportSpecialist {
 
     public void setProfileID(int profileID) {
         this.profileID = profileID;
+    }
+
+    @Override
+    public String toString() {
+        return "SupportSpecialist{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", _listTiket=" + listTiket +
+                ", profileID=" + profileID +
+                '}';
     }
 }

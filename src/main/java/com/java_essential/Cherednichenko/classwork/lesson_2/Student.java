@@ -1,5 +1,7 @@
 package com.java_essential.Cherednichenko.classwork.lesson_2;
 
+import java.util.Arrays;
+
 public class Student {
     public static void main(String[] args) {
         Student[] students = new Student[4];
@@ -54,11 +56,11 @@ public class Student {
         }
         Course course1 = new Course();
         Course course2 = new Course();
-        course1.setStudents(students[1], 0);
-        course1.setStudents(students[0], 1);
-        course2.setStudents(students[1], 0);
-        course2.setStudents(students[2], 1);
-        course2.setStudents(students[3], 2);
+        course1.setStudents(students[1]);
+        course1.setStudents(students[0]);
+        course2.setStudents(students[1]);
+        course2.setStudents(students[2]);
+        course2.setStudents(students[3]);
         course1.setCourseName("CourseName1");
         course1.setDescription("Description1");
         course1.setId(123123213);
@@ -68,16 +70,8 @@ public class Student {
         Course[] courses = new Course[2];
         courses[0] = course1;
         courses[1] = course2;
-        courses[0].getStudents();
-        //Mistake
         for (int i = 0, j = 0; i <= courses.length - 1; i++) {
-            for (int k = 0; k <= (courses[i].getStudents().length - 1); k++) {
-                if ((courses[i].getStudents())[k] != null) {
-                    j++;
-                }
-            }
-            System.out.println(courses[i].getCourseName() + ": " + j);
-            j = 0;
+            System.out.println(courses[i].getCourseName()+": "+courses[i].getStudents().size());
         }
 
 
@@ -102,6 +96,13 @@ public class Student {
     }
 
     public Student() {
+        this.id = 1;
+        this.username = "unknown";
+        this.mail = "unknown";
+        this.phone ="unknown";
+        this.name = "unknown";
+        this.lastName = "unknown";
+        this.age = 0;
     }
 
     public void setName(String name) {
