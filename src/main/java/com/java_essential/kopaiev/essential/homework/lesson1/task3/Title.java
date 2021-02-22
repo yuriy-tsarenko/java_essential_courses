@@ -11,8 +11,7 @@ public class Title {
         this.titleName = titleName;
     }
 
-    public void show()
-    {
+    public void show() {
         if (titleName == null) {
             System.out.println("Book title is not set");
         } else {

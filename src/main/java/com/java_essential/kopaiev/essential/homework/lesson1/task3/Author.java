@@ -12,8 +12,7 @@ public class Author {
         this.authorName = authorName;
     }
 
-    public void show()
-    {
+    public void show() {
         if (authorName == null) {
             System.out.println("Book author is not set");
         } else {

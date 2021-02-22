@@ -11,8 +11,7 @@ public class Content {
         this.contentName = contentName;
     }
 
-    public void show()
-    {
+    public void show() {
         if (contentName == null) {
             System.out.println("Book content is not set");
         } else {
