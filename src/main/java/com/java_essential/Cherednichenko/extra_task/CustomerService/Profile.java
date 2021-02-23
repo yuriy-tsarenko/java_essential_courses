@@ -8,6 +8,18 @@ public class Profile {
     private String phoneNumber;
     private String address;
     private String postalCode;
+
+    public Profile(int id, String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int customerID) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.customerID = customerID;
+    }
+
     private int customerID;
 
     public int getId() {

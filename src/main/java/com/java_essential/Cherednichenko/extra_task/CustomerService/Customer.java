@@ -1,9 +1,20 @@
 package com.java_essential.Cherednichenko.extra_task.CustomerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
     private int id;
+
+    public Customer(int id, String username, String password, int profileID) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.profileID = profileID;
+        this.listService = new ArrayList<>();
+        this.listTiket = new ArrayList<>();
+    }
+
     private String username;
     private String password;
     private int profileID;
@@ -46,16 +57,16 @@ public class Customer {
         return listService;
     }
 
-    public void setlistService(List<Integer> listService) {
-        this.listService = listService;
+    public void setlistService(int Service) {
+        this.listService.add(Service);
     }
 
     public List<Integer> getlistTiket() {
         return listTiket;
     }
 
-    public void setlistTiket(List<Integer> listTiket) {
-        this.listTiket = listTiket;
+    public void setlistTiket(int tiket) {
+        this.listTiket.add(tiket);
     }
 
     @Override

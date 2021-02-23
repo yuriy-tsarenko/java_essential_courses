@@ -8,6 +8,15 @@ public class Tiket {
     private int customerID;
     private int supportSpecialistID;
 
+    public Tiket(int id, String serviceName, String problemDescription, String isActive, int customerID, int supportSpecialistID) {
+        this.id = id;
+        this.serviceName = serviceName;
+        this.problemDescription = problemDescription;
+        this.isActive = isActive;
+        this.customerID = customerID;
+        this.supportSpecialistID = supportSpecialistID;
+    }
+
     public int getId() {
         return id;
     }

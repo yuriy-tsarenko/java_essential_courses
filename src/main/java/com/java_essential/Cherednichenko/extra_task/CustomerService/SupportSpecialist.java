@@ -1,5 +1,6 @@
 package com.java_essential.Cherednichenko.extra_task.CustomerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SupportSpecialist {
@@ -8,6 +9,14 @@ public class SupportSpecialist {
     private String password;
     private List<Integer> listTiket;
     private int profileID;
+
+    public SupportSpecialist(int id, String userName, String password, int profileID) {
+        this.id = id;
+        this.userName = userName;
+        this.password = password;
+        this.listTiket = new ArrayList<>();
+        this.profileID = profileID;
+    }
 
     public int getId() {
         return id;
@@ -37,8 +46,8 @@ public class SupportSpecialist {
         return listTiket;
     }
 
-    public void setlistTiket(List<Integer> listTiket) {
-        this.listTiket = listTiket;
+    public void setlistTiket(int tiket) {
+        this.listTiket.add(tiket);
     }
 
     public int getProfileID() {

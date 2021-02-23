@@ -1,5 +1,6 @@
 package com.java_essential.Cherednichenko.extra_task.CustomerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Service {
@@ -8,6 +9,14 @@ public class Service {
     private String isActive;
     private List<Integer> listCustomer;
     private String serviceMonthPrice;
+
+    public Service(int id, String serviceName, String isActive,  String serviceMonthPrice) {
+        this.id = id;
+        this.serviceName = serviceName;
+        this.isActive = isActive;
+        this.listCustomer = new ArrayList<>();
+        this.serviceMonthPrice = serviceMonthPrice;
+    }
 
     public int getId() {
         return id;
@@ -37,8 +46,8 @@ public class Service {
         return listCustomer;
     }
 
-    public void set_listCustomer(List<Integer> listCustomer) {
-        this.listCustomer = listCustomer;
+    public void setListCustomer(int customer) {
+        this.listCustomer.add(customer);
     }
 
     public String getServiceMonthPrice() {
