@@ -22,4 +22,4 @@ public class Main {
             System.out.println(prime.get(i));
         }
     }
-}
+}//
