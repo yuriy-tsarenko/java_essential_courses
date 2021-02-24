@@ -1,6 +1,6 @@
 package com.java_essential.kopaiev.essential.classwork.lesson4.task2;
 
-public class XMLHandler extends AbstractHandler{
+public class XMLHandler extends AbstractHandler {
 
     @Override
     void open() {
