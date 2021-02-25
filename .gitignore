@@ -83,6 +83,7 @@ nb-configuration.xml
 .vscode/
 .code-workspace
 
+
 ### STS ###
 .apt_generated
 .classpath
