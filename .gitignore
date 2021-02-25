@@ -1,6 +1,11 @@
 ##############################
 ## Java
 ##############################
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 .mtj.tmp/
 *.class
 *.jar
@@ -77,6 +82,14 @@ nb-configuration.xml
 ##############################
 .vscode/
 .code-workspace
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+
 
 ##############################
 ## OS X
