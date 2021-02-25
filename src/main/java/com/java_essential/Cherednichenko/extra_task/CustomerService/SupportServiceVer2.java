@@ -13,6 +13,8 @@ public class SupportServiceVer2 {
         SchemeForService schemeForService = new SchemeForService();
         SchemeForSupportSpecialist schemeForSupportSpecialist = new SchemeForSupportSpecialist();
         SchemeForTicket schemeForTicket = new SchemeForTicket();
+        int currentInt = 0;
+        String currentString = "";
         Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("Add Customer - 1");
@@ -28,92 +30,58 @@ public class SupportServiceVer2 {
             System.out.println("#save_tiket_to_file_{id} - 10");
             switch (scanner.nextInt()) {
                 case 1:
-                    System.out.println("Enter ID:");
-                    int customerID = scanner.nextInt();
-                    System.out.println("Enter Username:");
-                    String customerUsername = scanner.next();
-                    System.out.println("Enter Password:");
-                    String customerPassword = scanner.next();
-                    System.out.println("Please create a profile for the client");
-                    System.out.println("Enter ProfileID:");
-                    int profileID = scanner.nextInt();
-                    System.out.println("Enter FirstName:");
-                    String firstName = scanner.next();
-                    System.out.println("Enter LastName:");
-                    String lastName = scanner.next();
-                    System.out.println("Enter email:");
-                    String email = scanner.next();
-                    System.out.println("Enter PhoneNumber:");
-                    String phoneNumber = scanner.next();
-                    System.out.println("Enter Address:");
-                    String address = scanner.next();
-                    System.out.println("Enter PostalCode:");
-                    String postalCode = scanner.next();
+                    int customerID = inputInteger("Enter ID:");
+                    String customerUsername = inputString("Enter Username:");
+                    String customerPassword = inputString("Enter Password:");
+                    int profileID = inputInteger("Please create a profile for the client\nEnter ProfileID:");
+                    String firstName = inputString("Enter FirstName:");
+                    String lastName = inputString("Enter LastName:");
+                    String email = inputString("Enter email:");
+                    String phoneNumber = inputString("Enter PhoneNumber:");
+                    String address = inputString("Enter Address:");
+                    String postalCode = inputString("Enter PostalCode:");
                     CustomerServiceData.customerList.add(new Customer(customerID, customerUsername, customerPassword, profileID));
-                    CustomerServiceData.profileList.add(new Profile(profileID, firstName, lastName, email, phoneNumber, address, postalCode, customerID));
-                    System.out.println("Enter Service name:");
-                    String customerServiceName = scanner.next();
+                    CustomerServiceData.profileList.add(new Profile(profileID, firstName, lastName, email, phoneNumber, address, postalCode, customerID, 0));
+                    String customerServiceName = inputString("Enter Service name:");
                     schemeForCustomer.addService(customerServiceName, customerID);
                     break;
                 case 2:
-                    System.out.println("Enter ID:");
-                    int supportSpecialistID = scanner.nextInt();
-                    System.out.println("Enter Username:");
-                    String supportSpecialistIDUsername = scanner.next();
-                    System.out.println("Enter Password:");
-                    String supportSpecialistIDPassword = scanner.next();
-                    System.out.println("Please create a profile for the SupportSpecialist");
-                    System.out.println("Enter ProfileID:");
-                    int profileIDSupportSpecialist = scanner.nextInt();
-                    System.out.println("Enter FirstName:");
-                    String firstNameSupportSpecialist = scanner.next();
-                    System.out.println("Enter LastName:");
-                    String lastNameSupportSpecialist = scanner.next();
-                    System.out.println("Enter email:");
-                    String emailSupportSpecialist = scanner.next();
-                    System.out.println("Enter PhoneNumber:");
-                    String phoneNumberSupportSpecialist = scanner.next();
-                    System.out.println("Enter Address:");
-                    String addressSupportSpecialist = scanner.next();
-                    System.out.println("Enter PostalCode:");
-                    String postalCodeSupportSpecialist = scanner.next();
+                    int supportSpecialistID = inputInteger("Enter ID:");
+                    String supportSpecialistIDUsername = inputString("Enter Username:");
+                    String supportSpecialistIDPassword = inputString("Enter Password:");
+                    int profileIDSupportSpecialist = inputInteger("Please create a profile for the SupportSpecialist\nEnter ProfileID:");
+                    String firstNameSupportSpecialist = inputString("Enter FirstName:");
+                    String lastNameSupportSpecialist = inputString("Enter LastName:");
+                    String emailSupportSpecialist = inputString("Enter email:");
+                    String phoneNumberSupportSpecialist = inputString("Enter PhoneNumber:");
+                    String addressSupportSpecialist = inputString("Enter Address:");
+                    String postalCodeSupportSpecialist = inputString("Enter PostalCode:");
                     CustomerServiceData.supportSpecialistList.add(new SupportSpecialist(supportSpecialistID, supportSpecialistIDUsername, supportSpecialistIDPassword, supportSpecialistID));
-                    CustomerServiceData.profileList.add(new Profile(profileIDSupportSpecialist, firstNameSupportSpecialist, lastNameSupportSpecialist, emailSupportSpecialist, phoneNumberSupportSpecialist, addressSupportSpecialist, postalCodeSupportSpecialist, supportSpecialistID));
+                    CustomerServiceData.profileList.add(new Profile(profileIDSupportSpecialist, firstNameSupportSpecialist, lastNameSupportSpecialist, emailSupportSpecialist, phoneNumberSupportSpecialist, addressSupportSpecialist, postalCodeSupportSpecialist, 0, supportSpecialistID));
                     break;
                 case 3:
-                    System.out.println("Enter ID:");
-                    int serviceId = scanner.nextInt();
-                    System.out.println("Enter ServiceName:");
-                    String serviceName = scanner.next();
-                    System.out.println("Enter IsActive:");
-                    String isActive = scanner.next();
-                    System.out.println("Enter ServiceMonthPrice:");
-                    String serviceMonthPrice = scanner.next();
+                    int serviceId = inputInteger("Enter ID:");
+                    String serviceName = inputString("Enter ServiceName:");
+                    String isActive = inputString("Enter IsActive:");
+                    String serviceMonthPrice = inputString("Enter ServiceMonthPrice:");
                     CustomerServiceData.serviceList.add(new Service(serviceId, serviceName, isActive, serviceMonthPrice));
-                    System.out.println("Enter Customer ID:");
-                    int customerIDForService = scanner.nextInt();
+                    int customerIDForService = inputInteger("Enter Customer ID:");
                     schemeForService.addCustomer(customerIDForService, serviceId);
                     break;
                 case 4:
-                    System.out.println("Enter ID:");
-                    int ticketId = scanner.nextInt();
-                    System.out.println("Enter ServiceName:");
-                    String ticketServiceName = scanner.next();
-                    System.out.println("Enter ProblemDescription:");
-                    String problemDescription = scanner.next();
-                    System.out.println("Enter IsActive:");
-                    String active = scanner.next();
-                    System.out.println("Enter CustomerID:");
-                    int customerIDForTicket = scanner.nextInt();
-                    System.out.println("Enter SupportSpecialist:");
-                    int supportSpecialistForTicket = scanner.nextInt();
+                    int ticketId = inputInteger("Enter ID:");
+                    String ticketServiceName = inputString("Enter ServiceName:");
+                    String problemDescription = inputString("Enter ProblemDescription:");
+                    String active = inputString("Enter IsActive:");
+                    int customerIDForTicket = inputInteger("Enter CustomerID:");
+                    int supportSpecialistForTicket = inputInteger("Enter SupportSpecialist:ID:");
                     CustomerServiceData.tiketsList.add(new Tiket(ticketId, ticketServiceName, problemDescription, active, customerIDForTicket, supportSpecialistForTicket));
                     schemeForTicket.addTicketToCustomerAndSupportSpecialist(ticketId, supportSpecialistForTicket, customerIDForTicket);
                     break;
                 case 5:
                     for (Customer customer : CustomerServiceData.customerList) {
                         System.out.println(customer.toString());
-                        schemeForProfile.allItemByID(customer.getProfileID());
+                        schemeForProfile.allItemByCustomerID(customer.getId());
                     }
                     break;
                 case 6:
@@ -125,7 +93,7 @@ public class SupportServiceVer2 {
                 case 7:
                     for (SupportSpecialist supportSpecialist : CustomerServiceData.supportSpecialistList) {
                         System.out.println(supportSpecialist.toString());
-                        schemeForProfile.allItemByID(supportSpecialist.getProfileID());
+                        schemeForProfile.allItemBySpecialistID(supportSpecialist.getId());
                         for (Integer tiket : supportSpecialist.getlistTiket()) {
                             schemeForTicket.allItemByID(tiket);
                         }
@@ -135,6 +103,7 @@ public class SupportServiceVer2 {
                     for (Profile profile : CustomerServiceData.profileList) {
                         System.out.println(profile.toString());
                         schemeForCustomer.allItemByID(profile.getCustomerID());
+                        schemeForSupportSpecialist.allItemByID(profile.getSupportSpecialistID());
                     }
                     break;
                 case 9:
@@ -166,8 +135,43 @@ public class SupportServiceVer2 {
                     }
                     writer.flush();
                     break;
+                default:
+                    System.out.println("Wrong input");
             }
             System.out.println("Press any number");
         } while (!scanner.next().equals("exit"));
     }
+
+    //    public static Profile createProfile(int idCustomer, int idSupportSpecialist){
+//
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("Enter ProfileID:");
+//        int profileIDSupportSpecialist = scanner.nextInt();
+//        System.out.println("Enter FirstName:");
+//        String firstNameSupportSpecialist = scanner.next();
+//        System.out.println("Enter LastName:");
+//        String lastNameSupportSpecialist = scanner.next();
+//        System.out.println("Enter email:");
+//        String emailSupportSpecialist = scanner.next();
+//        System.out.println("Enter PhoneNumber:");
+//        String phoneNumberSupportSpecialist = scanner.next();
+//        System.out.println("Enter Address:");
+//        String addressSupportSpecialist = scanner.next();
+//        System.out.println("Enter PostalCode:");
+//        String postalCodeSupportSpecialist = scanner.next();
+//        return new Profile(profileIDSupportSpecialist,firstNameSupportSpecialist,lastNameSupportSpecialist,emailSupportSpecialist,phoneNumberSupportSpecialist,addressSupportSpecialist,postalCodeSupportSpecialist,idCustomer);
+//    }
+
+    public static Integer inputInteger(String string) {
+        System.out.println(string);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    public static String inputString(String string) {
+        System.out.println(string);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next();
+    }
+
 }

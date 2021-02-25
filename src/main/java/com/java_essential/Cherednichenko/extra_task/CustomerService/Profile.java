@@ -8,8 +8,10 @@ public class Profile {
     private String phoneNumber;
     private String address;
     private String postalCode;
+    private int customerID;
+    private int supportSpecialist;
 
-    public Profile(int id, String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int customerID) {
+    public Profile(int id, String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int customerID, int SupportSpecialist) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,9 +20,9 @@ public class Profile {
         this.address = address;
         this.postalCode = postalCode;
         this.customerID = customerID;
+        this.supportSpecialist = SupportSpecialist;
     }
 
-    private int customerID;
 
     public int getId() {
         return id;
@@ -86,6 +88,14 @@ public class Profile {
         this.customerID = customerID;
     }
 
+    public int getSupportSpecialistID() {
+        return supportSpecialist;
+    }
+
+    public void setSupportSpecialistID(int supportSpecialist) {
+        this.supportSpecialist = supportSpecialist;
+    }
+
     @Override
     public String toString() {
         return "Profile{" +
@@ -97,6 +107,7 @@ public class Profile {
                 ", address='" + address + '\'' +
                 ", postalCode='" + postalCode + '\'' +
                 ", customerID=" + customerID +
+                ", supportSpecialist=" + supportSpecialist +
                 '}';
     }
 }

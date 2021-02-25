@@ -1,7 +1,5 @@
 package com.java_essential.Cherednichenko.classwork.lesson_5;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

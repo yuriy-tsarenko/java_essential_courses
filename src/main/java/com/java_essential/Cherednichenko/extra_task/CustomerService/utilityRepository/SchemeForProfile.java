@@ -1,10 +1,6 @@
 package com.java_essential.Cherednichenko.extra_task.CustomerService.utilityRepository;
 
-import com.java_essential.Cherednichenko.extra_task.CustomerService.Customer;
 import com.java_essential.Cherednichenko.extra_task.CustomerService.Profile;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class SchemeForProfile implements InterfaceScheme {
 
@@ -18,6 +14,22 @@ public class SchemeForProfile implements InterfaceScheme {
     public void allItemByID(int id) {
         for (Profile profile : CustomerServiceData.profileList) {
             if (profile.getId() == id) {
+                System.out.println(profile.toString());
+            }
+        }
+    }
+
+    public void allItemByCustomerID(int id) {
+        for (Profile profile : CustomerServiceData.profileList) {
+            if (profile.getCustomerID() == id) {
+                System.out.println(profile.toString());
+            }
+        }
+    }
+
+    public void allItemBySpecialistID(int id) {
+        for (Profile profile : CustomerServiceData.profileList) {
+            if (profile.getSupportSpecialistID() == id) {
                 System.out.println(profile.toString());
             }
         }
