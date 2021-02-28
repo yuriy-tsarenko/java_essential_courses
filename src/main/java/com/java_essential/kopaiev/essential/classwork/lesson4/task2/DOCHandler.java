@@ -1,6 +1,6 @@
 package com.java_essential.kopaiev.essential.classwork.lesson4.task2;
 
-public class DOCHandler  extends AbstractHandler{
+public class DOCHandler  extends AbstractHandler {
     @Override
     void open() {
         System.out.println("DOC Document is opened");

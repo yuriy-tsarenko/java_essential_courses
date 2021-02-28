@@ -1,59 +1,35 @@
 package com.java_essential.kopaiev.essential.homework.lesson3.task3;
 
+import java.util.Scanner;
+
 public class Vehicle {
-    private int coordinateX;
-    private int coordinateY;
-
-    public int getCoordinateX() {
-        return coordinateX;
-    }
-
-    public void setCoordinateX(int coordinateX) {
-        this.coordinateX = coordinateX;
-    }
-
-    public int getCoordinateY() {
-        return coordinateY;
-    }
-
-    public void setCoordinateY(int coordinateY) {
-        this.coordinateY = coordinateY;
-    }
-
-    public int getCoordinateZ() {
-        return coordinateZ;
-    }
-
-    public void setCoordinateZ(int coordinateZ) {
-        this.coordinateZ = coordinateZ;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public float getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(float speed) {
-        this.speed = speed;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    private int coordinateZ;
+    private double coordinateX;
+    private double coordinateY;
+    private double coordinateZ;
     private float price;
     private float speed;
     private int year;
+
+    public Vehicle() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hi, Please set price");
+        price = scanner.nextFloat();
+        System.out.println("Hi, Please set speed");
+        speed = scanner.nextFloat();
+        System.out.println("Hi, Please set year");
+        year = scanner.nextInt();
+        coordinateX = Math.random();
+        coordinateY = Math.random();
+        coordinateZ = Math.random();
+    }
+
+    @Override
+    public String toString() {
+        return  " coordinateX = " + coordinateX
+                + ", coordinateY = " + coordinateY
+                + ", coordinateZ = " + coordinateZ
+                + ", price = " + price
+                + ", speed = " + speed
+                + ", year = " + year + "";
+    }
 }

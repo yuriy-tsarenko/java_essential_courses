@@ -10,7 +10,8 @@ public class Main {
 
     public static void rectangleCalculation() {
         Scanner sc = new Scanner(System.in);
-        double side1, side2;
+        double side1;
+        double side2;
 
         System.out.println("Hi, type first value");
         side1 = sc.nextDouble();
