@@ -19,10 +19,11 @@ public class Main {
 
         ListIterator<Integer> iterator = list.listIterator();
 
+        System.out.println("--------");
         while (iterator.hasNext()) {
-            list.set(iterator.nextIndex(), iterator.nextIndex() + 1);
-            System.out.println(iterator.next());
+            list.set(iterator.nextIndex(), iterator.next() + 1);
         }
 
+        list.forEach(System.out::println);
     }
 }

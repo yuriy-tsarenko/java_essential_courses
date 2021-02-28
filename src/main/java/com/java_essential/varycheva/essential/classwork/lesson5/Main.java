@@ -7,7 +7,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        // List list = Arrays.asList(array);
         List<Integer> list = new ArrayList<>();
         for (int value : array) {
             list.add(value);

@@ -8,7 +8,7 @@ public class Main {
         double side1 = scan.nextDouble();
         double side2 = scan.nextDouble();
 
-        if (side1 <= 0 || side2 <= 0) {
+        if((side1 <= 0) || (side2 <= 0)) {
             System.out.println("Сторона должна быть положительным числом");
         } else {
             Rectangle rectangle = new Rectangle(side1, side2);
