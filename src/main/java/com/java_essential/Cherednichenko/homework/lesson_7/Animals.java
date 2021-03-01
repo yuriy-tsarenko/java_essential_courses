@@ -7,25 +7,22 @@ import java.util.Arrays;
 public class Animals {
 
     public enum Animal {
-        ELEPHANT(0, "Слон"),
-        MONKEY(0, "Обезьяна"),
-        GIRAFFE(0, "Жираф"),
-        LION(0, "Лев");
+        ELEPHANT(0),
+        MONKEY(0),
+        GIRAFFE(0),
+        LION(0);
 
         private int age;
-        private final String name;
+
+        Animal(int age) {
+            this.age = age;
+        }
 
         @Override
         public String toString() {
-            return "Animal{" +
-                    "Возраст=" + age +
-                    ", Название=" + name +
+            return "" + name() + "{" +
+                    "age=" + age +
                     '}';
-        }
-
-        Animal(int age, String name) {
-            this.age = age;
-            this.name = name;
         }
     }
 
