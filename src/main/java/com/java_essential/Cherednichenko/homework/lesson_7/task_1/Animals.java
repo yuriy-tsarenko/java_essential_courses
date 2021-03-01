@@ -1,4 +1,4 @@
-package com.java_essential.Cherednichenko.homework.lesson_7;
+package com.java_essential.Cherednichenko.homework.lesson_7.task_1;
 
 import com.java_essential.Cherednichenko.classwork.lesson_5.Array;
 
