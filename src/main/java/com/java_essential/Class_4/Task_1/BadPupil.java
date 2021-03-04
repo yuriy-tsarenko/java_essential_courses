@@ -1,5 +1,5 @@
 package com.java_essential.Class_4.Task_1;
-/* Создать класс, представляющий учебный класс ClassRoom.Создайте класс ученик Pupil.
+/*Создать класс, представляющий учебный класс ClassRoom.Создайте класс ученик Pupil.
 В теле класса создайте методы void study(), void read(), void write(), void relax().
 Создайте 3 производных класса ExcelentPupil, GoodPupil, BadPupil от класса базового класса Pupil и
 переопределите каждый из методов, в зависимости от успеваемости ученика.
