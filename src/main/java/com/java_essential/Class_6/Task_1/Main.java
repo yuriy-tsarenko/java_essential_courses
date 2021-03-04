@@ -1,9 +1,10 @@
 package com.java_essential.Class_6.Task_1;
 
-/*Создать класс Vehicle с методом print.
+/* Создать класс Vehicle с методом print.
 В классе Vehicle, создайте внутренний класс Wheel и Door, которые также должны содержать метод print.
 Создайте экземпляры классов Wheel и Door.
  */
+
 class Vehicle {
     public void print() {
         System.out.println("print from class Vehicle");
