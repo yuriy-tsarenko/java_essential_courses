@@ -10,9 +10,7 @@ public class SimpleLog {
     public static void log(String str) {
         if (fis == null) getPath();
         try {
-            Calendar calendar = Calendar.getInstance();
-            String d = "\n" + calendar.getTime() + "\n";
-            fis.write(d.getBytes());
+            fis.write(date().getBytes());
             fis.write(str.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
@@ -36,5 +34,22 @@ public class SimpleLog {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void log(String str, String path) {
+        try {
+            fis = new FileOutputStream(new File(path + "log.txt"), true);
+            fis.write(date().getBytes());
+            fis.write(str.getBytes());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static String date() {
+        Calendar calendar = Calendar.getInstance();
+        return "\n" + calendar.getTime() + "\n";
     }
 }

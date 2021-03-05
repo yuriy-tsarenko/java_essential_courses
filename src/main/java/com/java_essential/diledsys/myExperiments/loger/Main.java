@@ -16,6 +16,7 @@ public class Main {
             } catch (ArithmeticException e) {
                 SimpleLog.log("деление на ноль \n" + e);
                 System.out.println("деление на ноль" + a + "/" + b);
+                SimpleLog.log("деление на ноль \n" + e,"c:\\");
             } catch (InputMismatchException ie) {
                 SimpleLog.log(String.valueOf(ie));
                 break;
