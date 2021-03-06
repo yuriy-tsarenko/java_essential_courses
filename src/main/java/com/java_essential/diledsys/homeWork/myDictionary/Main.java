@@ -10,13 +10,13 @@ public class Main {
         myDictionar.put(3,"Second");
         myDictionar.put(24,"Third");
         myDictionar.put(12,"Four8");
-        myDictionar.put(23,"Four3");
-        myDictionar.put(4,"Four6");
-        //myDictionar.remove(23);
+        myDictionar.put(23,"Five");
+        myDictionar.put(4,"Sex");
+        myDictionar.remove(23);
         //myDictionar.remove(2);
         System.out.println("key 12 = "+myDictionar.get(12));
-        System.out.println("size= " + myDictionar.size());
         System.out.println("iterator");
         myDictionar.Iterator();
+        System.out.println("size= " + myDictionar.size());
     }
 }

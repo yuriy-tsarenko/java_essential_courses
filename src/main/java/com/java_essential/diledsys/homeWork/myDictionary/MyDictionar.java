@@ -37,8 +37,8 @@ public class MyDictionar<K, V> implements MyList {
             head = a;
             tail = a;
         } else {
-            a.next = head;
-            head = a;
+            tail.next = a;
+            tail = a;
         }
     }
 
