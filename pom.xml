@@ -13,7 +13,6 @@
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
     </properties>
 
-
     <build>
         <plugins>
             <plugin>
@@ -26,5 +25,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
