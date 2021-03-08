@@ -9,14 +9,23 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <java.version>15</java.version>
+        <java.version>11</java.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <com.puppycrawl.tools.version>8.10</com.puppycrawl.tools.version>
+        <org.apache.logging.log4j>2.13.2</org.apache.logging.log4j>
     </properties>
     <dependencies>
-
-
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${org.apache.logging.log4j}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -34,31 +43,24 @@
                 </dependencies>
                 <executions>
                     <execution>
-                        <phase>validate</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <configLocation>src/main/resources/checkstyle.xml</configLocation>
-                    <sourceDirectories>src/main/java</sourceDirectories>
-                    <encoding>UTF-8</encoding>
-                    <consoleOutput>true</consoleOutput>
-                    <failsOnError>true</failsOnError>
-                    <failOnViolation>true</failOnViolation>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <release>${java.version}</release>
                 </configuration>
-
             </plugin>
         </plugins>
     </build>
-
 </project>
