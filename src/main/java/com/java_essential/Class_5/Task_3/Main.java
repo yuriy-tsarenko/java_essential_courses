@@ -1,5 +1,5 @@
 package com.java_essential.Class_5.Task_3;
-/*Создать класс Main, создать список целых чисел и используя ListIterator пройтись по списку и увеличить значения на 1;*/
+/* Создать класс Main, создать список целых чисел и используя ListIterator пройтись по списку и увеличить значения на 1;*/
 
 import java.util.ArrayList;
 import java.util.ListIterator;
