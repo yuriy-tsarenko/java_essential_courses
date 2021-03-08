@@ -1,7 +1,5 @@
 package com.java_essential.kopaiev.essential.homework.lesson1.task3;
 
-import java.awt.desktop.SystemSleepEvent;
-import java.io.Reader;
 import java.util.Scanner;
 
 public class Book {

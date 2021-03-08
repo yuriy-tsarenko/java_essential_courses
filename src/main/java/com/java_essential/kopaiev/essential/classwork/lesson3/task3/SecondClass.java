@@ -3,7 +3,7 @@ package com.java_essential.kopaiev.essential.classwork.lesson3.task3;
 public final class SecondClass implements FirstInterface {
     private int field;
 
-    private int someMethod(){
+    private int someMethod() {
         return 0;
     }
 
