@@ -1,4 +1,4 @@
-package com.java_essential.ready_tasks.lesson8.examples.with_logger;
+package com.java_essential.tsarenko.lesson8.examples.with_logger;
 
 
 import java.util.Scanner;

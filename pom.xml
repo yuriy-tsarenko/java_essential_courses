@@ -11,8 +11,6 @@
     <properties>
         <java.version>11</java.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
-        <com.puppycrawl.tools.version>8.10</com.puppycrawl.tools.version>
         <org.apache.logging.log4j>2.13.2</org.apache.logging.log4j>
     </properties>
     <dependencies>
@@ -29,30 +27,6 @@
     </dependencies>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${maven.checkstyle.plugin.version}</version>
-                <inherited>false</inherited>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.puppycrawl.tools</groupId>
-                        <artifactId>checkstyle</artifactId>
-                        <version>${com.puppycrawl.tools.version}</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <release>${java.version}</release>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
