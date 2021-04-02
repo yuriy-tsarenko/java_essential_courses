@@ -1,18 +1,10 @@
 package com.java_essential.ready_tasks.lesson8.examples.with_logger;
 
 
-import Homework.lesson3.Vehicle.Vehicle;
-import org.apache.log4j.Logger;
-
 import java.util.Scanner;
 
 public class Main {
-
-    private static final Logger log = Logger.getLogger(Main.class);
-
     public static void main(String[] args) {
-        Vehicle vehicle = new Vehicle();
-
         Scanner sc = new Scanner(System.in);
         SimpleLogger logger = new SimpleLogger();
         System.out.println("Which type of document would you like to work with?" +
@@ -31,7 +23,7 @@ public class Main {
                     break;
             }
         } catch (IllegalStateException e) {
-           log.info(e);
+            logger.logInfo(e.toString());
         }
     }
 }
